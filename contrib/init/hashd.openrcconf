@@ -1,0 +1,26 @@
+# /etc/conf.d/hashd: config file for /etc/init.d/hashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/hash/hash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/hashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/hashd.pid"
+
+# Where to write hashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/hashd"
+
+# User and group to own hashd process
+#BITCOIND_USER="hash"
+#BITCOIND_GROUP="hash"
+
+# Path to hashd executable
+#BITCOIND_BIN="/usr/bin/hashd"
+
+# Nice value to run hashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

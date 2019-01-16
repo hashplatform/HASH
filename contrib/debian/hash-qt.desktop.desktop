@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hash
+Comment=Hash P2P Cryptocurrency
+Exec=hash-qt %u
+Terminal=false
+Type=Application
+Icon=hash128
+MimeType=x-scheme-handler/hash;
+Categories=Office;Finance;
+Name[en_US]=hash-qt.desktop
