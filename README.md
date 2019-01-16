@@ -54,4 +54,8 @@ and Linux, OS X, and that unit and sanity tests are automatically run.
 Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
+<<<<<<< HEAD
 not straightforward.
+=======
+not straightforward.# HASH
+>>>>>>> 0fdd4758573d9796c1bb4f42d37260e3d3211f81
