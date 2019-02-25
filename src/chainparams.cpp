@@ -135,6 +135,9 @@ public:
         vSeeds.push_back(CDNSSeedData("104.238.179.69", "104.238.179.69"));
         vSeeds.push_back(CDNSSeedData("144.202.19.61", "144.202.19.61"));
         vSeeds.push_back(CDNSSeedData("45.77.117.180", "45.77.117.180"));
+	vSeeds.push_back(CDNSSeedData("74.121.190.50", "74.121.190.50"));
+	vSeeds.push_back(CDNSSeedData("216.244.65.74", "216.244.65.74"));
+	vSeeds.push_back(CDNSSeedData("5.189.155.109", "5.189.155.109"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40); // H
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 23); // A
