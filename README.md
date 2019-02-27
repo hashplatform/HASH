@@ -49,12 +49,6 @@ These tests can be run (if the [test dependencies](/qa) are installed) with: `qa
 The Travis CI system makes sure that every pull request is built for Windows
 and Linux, OS X, and that unit and sanity tests are automatically run.
 
-### Manual Quality Assurance (QA) Testing
-
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-<<<<<<< HEAD
 not straightforward.
 =======
 not straightforward.# HASH
