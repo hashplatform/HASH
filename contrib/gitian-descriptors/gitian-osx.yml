@@ -1,5 +1,5 @@
 ---
-name: "hash-osx-1.0"
+name: "hash-osx-1.1"
 enable_cache: true
 suites:
 - "xenial"
