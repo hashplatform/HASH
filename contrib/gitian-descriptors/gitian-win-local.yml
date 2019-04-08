@@ -23,7 +23,7 @@ packages:
 - "python"
 remotes:
 - "url": "/home/crypto/Projects/hash"
-  "dir": "hash"
+  "dir": "HASH"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped

@@ -27,7 +27,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/hash/gitian.sigs.git
     git clone https://github.com/hash/hash-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/hash/hash.git
+    git clone https://github.com/hashplatform/HASH.git
 
 ### Hash maintainers/release engineers, suggestion for writing release notes
 
