@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/hash/hash.git
-        cd hash
+        git clone https://github.com/hashplatform/HASH.git
+        cd HASH
 
 2.  Build hashd:
 

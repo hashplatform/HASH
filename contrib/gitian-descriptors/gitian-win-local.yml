@@ -1,5 +1,5 @@
 ---
-name: "hash-win-1.0"
+name: "hash-win-1.1"
 enable_cache: true
 suites:
 - "xenial"
@@ -23,7 +23,7 @@ packages:
 - "python"
 remotes:
 - "url": "/home/crypto/Projects/hash"
-  "dir": "hash"
+  "dir": "HASH"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -101,7 +101,7 @@ script: |
   create_per-host_linker_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd hash
+  cd HASH
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
