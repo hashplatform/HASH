@@ -282,7 +282,7 @@ Clone the git repositories for hash and gitian and then checkout the hash versio
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
 git clone https://github.com/hashplatform/HASH.git
-cd hash
+cd HASH
 git checkout v${VERSION}
 cd ..
 ```
