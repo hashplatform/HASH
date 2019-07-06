@@ -81,7 +81,7 @@ bool CMasternodeSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
                 } else if (txnheight <= GetSporkValue(SPORK_27_COLLAT_09)) {
                     collateral = 80000 * COIN;
                 } else if (txnheight <= GetSporkValue(SPORK_28_COLLAT_10)) {
-                    collateral = 900000 * COIN;
+                    collateral = 90000 * COIN;
                 } else if (txnheight <= GetSporkValue(SPORK_29_COLLAT_11)) {
                     collateral = 100000 * COIN;
                 }
