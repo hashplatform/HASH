@@ -1641,7 +1641,27 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= GetSporkValue(SPORK_28_COLLAT_10)) {
         nSubsidy = 60 * COIN;
     } else if (nHeight <= GetSporkValue(SPORK_29_COLLAT_11)) {
-        nSubsidy = 120 * COIN;
+        nSubsidy = 47 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_30_COLLAT_12)) {
+        nSubsidy = 55 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_31_COLLAT_13)) {
+        nSubsidy = 38 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_32_COLLAT_14)) {
+        nSubsidy = 33 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_33_COLLAT_15)) {
+        nSubsidy = 29 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_34_COLLAT_16)) {
+        nSubsidy = 25 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_35_COLLAT_17)) {
+        nSubsidy = 22 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_36_COLLAT_18)) {
+        nSubsidy = 20 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_37_COLLAT_19)) {
+        nSubsidy = 17 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_38_COLLAT_20)) {
+        nSubsidy = 14 * COIN;
+    } else if (nHeight <= GetSporkValue(SPORK_39_COLLAT_21)) {
+        nSubsidy = 10 * COIN;
     } else {
         nSubsidy = 0.1 * COIN;
     }

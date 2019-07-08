@@ -81,10 +81,29 @@ bool CMasternodeSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
                 } else if (txnheight <= GetSporkValue(SPORK_27_COLLAT_09)) {
                     collateral = 80000 * COIN;
                 } else if (txnheight <= GetSporkValue(SPORK_28_COLLAT_10)) {
-                    collateral = 900000 * COIN;
+                    collateral = 90000 * COIN;
                 } else if (txnheight <= GetSporkValue(SPORK_29_COLLAT_11)) {
                     collateral = 100000 * COIN;
-                }
+                } else if (txnheight <= GetSporkValue(SPORK_30_COLLAT_12)) {
+                    collateral = 110000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_31_COLLAT_13)) {
+                    collateral = 120000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_32_COLLAT_14)) {
+                    collateral = 130000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_33_COLLAT_15)) {
+                    collateral = 140000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_34_COLLAT_16)) {
+                    collateral = 150000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_35_COLLAT_17)) {
+                    collateral = 160000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_36_COLLAT_18)) {
+                    collateral = 170000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_37_COLLAT_19)) {
+                    collateral = 180000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_38_COLLAT_20)) {
+                    collateral = 190000 * COIN;
+                } else if (txnheight <= GetSporkValue(SPORK_39_COLLAT_21)) {
+                    collateral = 200000 * COIN;
 
         }
 
@@ -182,5 +201,15 @@ bool CMasternodeSigner::IsCollateralAmount(const CAmount& amount)
             amount == 70000  * COIN ||
             amount == 80000  * COIN ||
             amount == 90000  * COIN ||
-            amount == 100000  * COIN;
+            amount == 100000  * COIN ||
+            amount == 110000  * COIN ||
+            amount == 120000  * COIN ||
+            amount == 130000  * COIN ||
+            amount == 140000  * COIN ||
+            amount == 150000  * COIN ||
+            amount == 160000  * COIN ||
+            amount == 170000  * COIN ||
+            amount == 180000  * COIN ||
+            amount == 190000  * COIN ||
+            amount == 200000  * COIN;
 }

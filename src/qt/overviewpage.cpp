@@ -253,13 +253,17 @@ void OverviewPage::setWalletModel(WalletModel* model)
                          SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
-
+        connect(model->getOptionsModel(), SIGNAL(hideOrphansChanged(bool)), this, SLOT(hideOrphans(bool)));
         updateWatchOnlyLabels(model->haveWatchOnly());
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
     // update the display unit, to not use the default ("HASH")
     updateDisplayUnit();
+    
+    // Hide orphans
+    QSettings settings;
+    hideOrphans(settings.value("fHideOrphans", true).toBool());
 }
 
 void OverviewPage::updateDisplayUnit()
@@ -287,4 +291,9 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+void OverviewPage::hideOrphans(bool fHide)
+{
+    filter->setHideOrphans(fHide);
 }

@@ -68,6 +68,11 @@ void OptionsModel::Init()
     if (!settings.contains("strThirdPartyTxUrls"))
         settings.setValue("strThirdPartyTxUrls", "");
     strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "").toString();
+    
+     if (!settings.contains("fHideOrphans"))
+        settings.setValue("fHideOrphans", true);
+    fHideOrphans = settings.value("fHideOrphans").toBool();
+
 
     if (!settings.contains("fCoinControlFeatures"))
         settings.setValue("fCoinControlFeatures", false);
@@ -208,6 +213,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return nDisplayUnit;
         case ThirdPartyTxUrls:
             return strThirdPartyTxUrls;
+        case HideOrphans:
+            return settings.value("fHideOrphans");
         case Digits:
             return settings.value("digits");
         case Language:
@@ -318,6 +325,11 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
                 settings.setValue("language", value);
                 setRestartRequired(true);
             }
+            break;
+        case HideOrphans:
+            fHideOrphans = value.toBool();
+            settings.setValue("fHideOrphans", fHideOrphans);
+            emit hideOrphansChanged(fHideOrphans);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

@@ -39,6 +39,7 @@ public:
         Digits,              // QString
         Language,            // QString
         CoinControlFeatures, // bool
+        HideOrphans,    // bool
         ThreadsScriptVerif,  // int
         DatabaseCache,       // int
         SpendZeroConfChange, // bool
@@ -81,6 +82,7 @@ private:
     int nDisplayUnit;
     QString strThirdPartyTxUrls;
     bool fCoinControlFeatures;
+    bool fHideOrphans;
     /* settings that were overriden by command-line */
     QString strOverriddenByCommandLine;
 
@@ -90,6 +92,7 @@ private:
 signals:
     void displayUnitChanged(int unit);
     void coinControlFeaturesChanged(bool);
+    void hideOrphansChanged(bool);
 };
 
 #endif // BITCOIN_QT_OPTIONSMODEL_H
