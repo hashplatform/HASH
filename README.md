@@ -1,4 +1,4 @@
-Hash
+HASH PLATFORM
 =================================================
 
 The real threat always comes unexpectedly.
