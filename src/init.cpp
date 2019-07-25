@@ -930,14 +930,22 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 #ifndef WIN32
     CreatePidFile(GetPidFile(), getpid());
 #endif
-    if (GetBoolArg("-shrinkdebugfile", !fDebug))
+   if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
-    LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Hash version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+
+    if (fPrintToDebugLog)
+        OpenDebugLog();
+
+#if (OPENSSL_VERSION_NUMBER < 0x10100000L)
     LogPrintf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
+#elif defined OPENSSL_VERSION
+    LogPrintf("Using OpenSSL version %s\n", OpenSSL_version(OPENSSL_VERSION));
+#elif defined LIBRESSL_VERSION_TEXT
+    LogPrintf("Using %s\n", LIBRESSL_VERSION_TEXT);
+#endif
+
 #ifdef ENABLE_WALLET
     LogPrintf("Using BerkeleyDB version %s\n", DbEnv::version(0, 0, 0));
-#endif
     if (!fLogTimestamps)
         LogPrintf("Startup time: %s\n", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()));
     LogPrintf("Default data directory %s\n", GetDefaultDataDir().string());
