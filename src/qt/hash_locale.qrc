@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/hash_bg.qm</file>
+        <file alias="ca">locale/hash_ca.qm</file>
+        <file alias="cs">locale/hash_cs.qm</file>
+        <file alias="da">locale/hash_da.qm</file>
+        <file alias="de">locale/hash_de.qm</file>
+        <file alias="en">locale/hash_en.qm</file>
+        <file alias="en_US">locale/hash_en_US.qm</file>
+        <file alias="es">locale/hash_es.qm</file>
+        <file alias="fi">locale/hash_fi.qm</file>
+        <file alias="fr_FR">locale/hash_fr_FR.qm</file>
+        <file alias="it">locale/hash_it.qm</file>
+        <file alias="ja">locale/hash_ja.qm</file>
+        <file alias="ko_KR">locale/hash_ko_KR.qm</file>
+        <file alias="nl">locale/hash_nl.qm</file>
+        <file alias="pl">locale/hash_pl.qm</file>
+        <file alias="pt">locale/hash_pt.qm</file>
+        <file alias="pt_BR">locale/hash_pt_BR.qm</file>
+        <file alias="ro_RO">locale/hash_ro_RO.qm</file>
+        <file alias="ru">locale/hash_ru.qm</file>
+        <file alias="sk">locale/hash_sk.qm</file>
+        <file alias="sv">locale/hash_sv.qm</file>
+        <file alias="tr">locale/hash_tr.qm</file>
+        <file alias="uk">locale/hash_uk.qm</file>
+        <file alias="zh_CN">locale/hash_zh_CN.qm</file>
+        <file alias="zh_TW">locale/hash_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,2 @@
+usr/local/bin/hashd usr/bin
+usr/local/bin/hash-cli usr/bin
