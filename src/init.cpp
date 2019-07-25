@@ -934,7 +934,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         ShrinkDebugFile();
 
     if (fPrintToDebugLog)
-        OpenDebugLog();
+        fReopenDebugLog();
 
 #if (OPENSSL_VERSION_NUMBER < 0x10100000L)
     LogPrintf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
