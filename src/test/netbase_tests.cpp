@@ -234,6 +234,6 @@ BOOST_AUTO_TEST_CASE(subnet_test)
     subnet = CSubNet("1:2:3:4:5:6:7:8/ffff:ffff:ffff:fffe:ffff:ffff:ffff:ff0f");
     BOOST_CHECK_EQUAL(subnet.ToString(), "1:2:3:4:5:6:7:8/ffff:ffff:ffff:fffe:ffff:ffff:ffff:ff0f");
 }
-}
+
 
 BOOST_AUTO_TEST_SUITE_END()

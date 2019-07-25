@@ -595,23 +595,34 @@ void CNode::SetBanned(const banmap_t &banMap)
     setBannedIsDirty = true;
 }
 
+
+
 void CNode::SweepBanned()
 {
     int64_t now = GetTime();
 
-    LOCK(cs_setBanned);
-    banmap_t::iterator it = setBanned.begin();
-    while(it != setBanned.end())
+    bool notifyUI = false;
     {
-        CBanEntry banEntry = (*it).second;
-        if(now > banEntry.nBanUntil)
+    LOCK(cs_setBanned);
+        banmap_t::iterator it = setBanned.begin();
+        while(it != setBanned.end())
         {
-            setBanned.erase(it++);
-            setBannedIsDirty = true;
-        LogPrint("net", "%s: Removed banned node ip/subnet from banlist.dat: %s\n", __func__, CSubNet.ToString());
+            CSubNet subNet = (*it).first;
+            CBanEntry banEntry = (*it).second;
+            if(now > banEntry.nBanUntil)
+            {
+                setBanned.erase(it++);
+                setBannedIsDirty = true;
+                notifyUI = true;
+                LogPrint("net", "%s: Removed banned node ip/subnet from banlist.dat: %s\n", __func__, subNet.ToString());
+            }
+            else
+                ++it;
         }
-        else
-            ++it;
+    }
+// update UI
+    if(notifyUI) {
+        uiInterface.BannedListChanged();
     }
 }
 
