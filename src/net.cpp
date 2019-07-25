@@ -608,7 +608,7 @@ void CNode::SweepBanned()
         {
             setBanned.erase(it++);
             setBannedIsDirty = true;
-        LogPrint("net", "%s: Removed banned node ip/subnet from banlist.dat: %s\n", __func__, subNet.ToString());
+        LogPrint("net", "%s: Removed banned node ip/subnet from banlist.dat: %s\n", __func__, CSubNet.ToString());
         }
         else
             ++it;
