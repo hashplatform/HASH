@@ -142,9 +142,9 @@ public:
         vSeeds.push_back(CDNSSeedData("dnsseed.hashnodes.com", "dnsseed.hashnodes.com"));
         vSeeds.push_back(CDNSSeedData("dnsseed2.hashnodes.com", "dnsseed2.hashnodes.com"));
         vSeeds.push_back(CDNSSeedData("144.202.19.61", "144.202.19.61"));
-	    vSeeds.push_back(CDNSSeedData("74.121.190.50", "74.121.190.50"));
-	    vSeeds.push_back(CDNSSeedData("216.244.65.74", "216.244.65.74"));
-	    vSeeds.push_back(CDNSSeedData("5.189.155.109", "5.189.155.109"));
+	vSeeds.push_back(CDNSSeedData("74.121.190.50", "74.121.190.50"));
+	vSeeds.push_back(CDNSSeedData("216.244.65.74", "216.244.65.74"));
+	vSeeds.push_back(CDNSSeedData("5.189.155.109", "5.189.155.109"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40); // H
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 23); // A
@@ -214,8 +214,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         // assert(hashGenesisBlock == uint256("0x0000010ec54414321c3a125b9764e2b5c7bdbafe783eb93337c5c2076682202c"));
 
-        vFixedSeeds.clear();
-        vSeeds.clear();
+        
 
         // Testnet Hash addresses start with 'p'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 117);
@@ -230,7 +229,7 @@ public:
         // Testnet hash BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
-        convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
+       
 
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = false;
